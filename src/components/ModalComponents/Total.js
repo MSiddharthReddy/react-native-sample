@@ -27,7 +27,6 @@ const styles = {
     justifyContent: 'flex-start',
     flexDirection: 'row',
     backgroundColor: '#F7F9FA',
-    marginTop: 15,
     height: 40
   },
   textContainer: {

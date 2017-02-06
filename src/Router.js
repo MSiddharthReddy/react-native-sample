@@ -7,8 +7,8 @@ const RouterComponent = () => {
   return (
     <Router style={{ paddingTop: 65 }}>
     <Scene key="root">
-    <Scene key="modal" component={Confirm} initial />
-    <Scene key="thankYou" component={ThankYou} title="Thank You!" />
+    <Scene key="modal" component={Confirm} hideNavBar initial />
+    <Scene key="thankYou" component={ThankYou} title="Thank You!" hideNavBar />
     </Scene>
     </Router>
   );

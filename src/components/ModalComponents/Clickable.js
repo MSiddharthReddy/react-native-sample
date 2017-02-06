@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Arrow } from '../CommonComponents';
 import ClickableDetail from './ClickableDetail';
+import CardSection from './CardSection';
 import Total from './Total';
 
 const Clickable = ({ data }) => {
@@ -11,23 +12,20 @@ const Clickable = ({ data }) => {
     total
   } = data;
 
-  const {
-    container
-   } = styles;
   return (
 <View>
- <TouchableOpacity>
-    <View style={container}>
+ <TouchableOpacity style={{ paddingTop: 15 }}>
+    <CardSection>
       <ClickableDetail
       header='Ship to'
       main={ship.name}
       sub={ship.address}
       />
       <Arrow />
-    </View>
+    </CardSection>
   </TouchableOpacity>
   <TouchableOpacity>
-     <View style={container}>
+     <CardSection>
      <ClickableDetail
      header='Pay with'
      main={pay[0].type + ' ' + pay[0].number}
@@ -35,7 +33,7 @@ const Clickable = ({ data }) => {
      subColor='#B3B6B8'
      />
        <Arrow />
-     </View>
+     </CardSection>
    </TouchableOpacity>
    <TouchableOpacity>
       <Total value={total.value} currency={total.currency} />
@@ -43,12 +41,5 @@ const Clickable = ({ data }) => {
   </View>
   );
 };
-const styles = {
-  container: {
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    position: 'relative',
-    paddingTop: 15
-  }
-};
+
 export default Clickable;
