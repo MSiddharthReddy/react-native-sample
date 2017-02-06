@@ -1,4 +1,4 @@
-//Code for ios
+//Code for Android
 
 //Import React Library - Knows how a component should behave
 import React from 'react';
