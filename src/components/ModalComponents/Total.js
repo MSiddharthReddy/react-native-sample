@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Dimensions } from 'react-native';
 import { Content, Arrow } from '../CommonComponents';
-// import Arrow from './Arrow';
+
+const width = Dimensions.get('window').width - ((Dimensions.get('window').width * 80) / 375);
+const textWidth = (200 * width) / 295;
+const totalWidth = (95 * width) / 295;
 
 const Total = ({ value, currency }) => {
   const {
@@ -10,12 +13,13 @@ const Total = ({ value, currency }) => {
     total
   } = styles;
   return (
+
     <View style={containerStyle}>
       <View style={textContainer}>
         <Content weight='700'> Total </Content>
       </View>
       <View style={total}>
-      <Content weight='700'>{currency}{value}</Content>
+      <Content weight='700' lines={1}>{currency}{value}</Content>
       </View>
     <Arrow />
     </View>
@@ -33,12 +37,12 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-around',
     paddingLeft: 25,
-    width: Dimensions.get('window').width - 175
+    width: textWidth
   },
   total: {
    justifyContent: 'center',
    alignItems: 'flex-end',
-   width: Dimensions.get('window').width - 280
+   width: totalWidth
   }
 };
 export default Total;

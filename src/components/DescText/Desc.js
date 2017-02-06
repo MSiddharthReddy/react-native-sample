@@ -33,9 +33,10 @@ const Policy = () => {
 
 const styles = {
   containerStyle: {
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    paddingLeft: 25
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingLeft: 25,
+    paddingRight: 25
   }
 };
 

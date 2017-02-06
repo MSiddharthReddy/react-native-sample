@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Actions } from 'react-native-router-flux';
-import { Modal, ActivityIndicator, View } from 'react-native';
+import { Modal, ActivityIndicator, View, Dimensions } from 'react-native';
 import { Card, CardSection, Clickable } from './ModalComponents';
 import { Button } from './CommonComponents';
 import { Footer, Policy } from './DescText';
@@ -18,6 +18,7 @@ class Confirm extends Component {
   }
    componentWillMount() {
      console.log('Component will Mount');
+       console.log(Dimensions.get('window').width);
      axios.get('https://react-native-sample.herokuapp.com')
      .then(response => {
        this.setState({
@@ -36,7 +37,7 @@ class Confirm extends Component {
         style={{
           alignItems: 'center',
           justifyContent: 'center',
-          paddingTop: 300
+          paddingTop: 250
         }}
         color='#1072B7'
         size="large"

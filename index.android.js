@@ -5,7 +5,7 @@ import React from 'react';
 //Import ReactNative component - knows how to take a component
 // and show it on the device, also give us primitive components.
 import { AppRegistry, View } from 'react-native';
-import Main from './src/components/Main';
+import Main from './src/Main';
 // import Header from './src/components/header';
 
 //Create a Component

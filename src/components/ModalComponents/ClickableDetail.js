@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Dimensions } from 'react-native';
 import { Content } from '../CommonComponents';
 
+const width = Dimensions.get('window').width - ((Dimensions.get('window').width * 80) / 375);
+
 const ClickableDetail = ({ header, main, sub, subColor }) => {
   const { textContainer } = styles;
   return (
@@ -19,7 +21,7 @@ const styles = {
     justifyContent: 'space-around',
     paddingLeft: 25,
     height: 65,
-    width: Dimensions.get('window').width - 80
+    width
   }
 };
 

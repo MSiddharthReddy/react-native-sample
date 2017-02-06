@@ -1,5 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Dimensions } from 'react-native';
+
+const width = (Dimensions.get('window').width * 20) / 375;
+
 
 const Card = ({ children }) => {
   const { containerStyle } = styles;
@@ -17,8 +20,8 @@ const styles = {
     position: 'relative',
     flex: 1,
     justifyContent: 'center',
-    paddingLeft: 20,
-    paddingRight: 20
+    paddingLeft: width,
+    paddingRight: width
   }
 
 };
